@@ -15,7 +15,7 @@ export default function Dashboard() {
                 <Header />
 
                 {isMobile ? (
-                    <ScrollView contentContainerStyle={tw`pb-4 mt-5`}>
+                    <ScrollView contentContainerStyle={tw`pb-4`}>
                         <Profile/>
                         <UserProfile/>
                     </ScrollView>

@@ -48,6 +48,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <MaterialIcons name="payment" size={24} color="black" />,
         }}
       />
+                  <Tabs.Screen
+        name="Login"
+        options={{
+          title: 'Session',
+          tabBarIcon: ({ color }) => <MaterialIcons name="login" size={24} color="black" />,
+        }}
+      />
     </Tabs>
   );
 }

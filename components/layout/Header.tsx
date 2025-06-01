@@ -2,7 +2,12 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import tw from "@/Utils/tw";
 
-const Header = ({ userName = "Willian Romero" }) => {
+type HeaderProps = {
+  userName?: string;
+  isLoggedIn?: boolean;
+};
+
+const Header = ({ userName = "Willian Romero", isLoggedIn = false }: HeaderProps) => {
   return (
     <View style={[tw`bg-[#003366] py-4 px-4`, styles.header]}>
       <View style={tw`flex-row justify-between items-center mb-2`}>
@@ -12,12 +17,14 @@ const Header = ({ userName = "Willian Romero" }) => {
           resizeMode="contain"
         />
 
-        <View style={tw`flex-row items-center`}>
-          <Text style={tw`text-white mr-2 text-sm`}>{userName}</Text>
-          <TouchableOpacity>
-            <Ionicons name="person-circle-outline" size={24} color="white" />
-          </TouchableOpacity>
-        </View>
+      {isLoggedIn && (
+          <View style={tw`flex-row items-center`}>
+            <Text style={tw`text-white mr-2 text-sm`}>{userName}</Text>
+            <TouchableOpacity>
+              <Ionicons name="person-circle-outline" size={24} color="white" />
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
 
       <View style={tw`items-center`}>

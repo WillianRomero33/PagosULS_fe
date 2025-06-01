@@ -24,9 +24,9 @@ const UserProfile = () => {
   return (
     <View style={tw`flex-1 bg-gray-50`}>
       {/* Tarjeta de perfil compacta */}
-      <View style={tw`bg-white rounded-lg shadow-sm mx-3 my-2 overflow-hidden`}>
+      <View style={tw`bg-white rounded-lg shadow-sm mx-3 overflow-hidden`}>
         {/* Encabezado */}
-        <View style={tw`flex-row justify-between items-center bg-[#003366] px-3 py-2`}>
+        <View style={tw`flex-row justify-between items-center bg-[#003366] px-3`}>
           <Text style={tw`text-white font-bold ${isSmallScreen ? 'text-base' : 'text-lg'}`}>
             Perfil Estudiantil
           </Text>

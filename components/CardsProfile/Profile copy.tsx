@@ -12,7 +12,7 @@ const Profile = () => {
     <ScrollView
       contentContainerStyle={tw`flex-grow bg-gray-100 justify-center p-0`}
     >
-      <View style={tw`bg-white rounded-lg shadow-md overflow-hidden mx-2`}>
+      <View style={tw`bg-white rounded-lg shadow-md overflow-hidden mx-2 my-4`}>
         <View style={tw`bg-[#003366] px-4 py-3`}>
           <Text
             style={tw`text-white ${
