@@ -36,7 +36,7 @@ const PaymentStatus = () => {
             <Text
               style={tw`text-gray-600 ${isMobile ? "text-sm" : "text-base"}`}
             >
-              Matrícula
+              Mayo
             </Text>
           </View>
           <View style={tw`flex-row items-center`}>
@@ -45,7 +45,7 @@ const PaymentStatus = () => {
                 isMobile ? "text-sm" : "text-base"
               } mr-2`}
             >
-              $150.00
+              $45.00
             </Text>
             <View style={tw`bg-yellow-100 px-2 py-1 rounded-full`}>
               <Text style={tw`text-yellow-800 text-xs`}>Pendiente</Text>

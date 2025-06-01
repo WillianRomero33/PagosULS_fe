@@ -23,26 +23,26 @@ const PaymentSection = () => {
   // Todos los conceptos de pago organizados por ciclo
   const allPaymentOptions: PaymentOptions = {
     "I-2024": [
-      { id: 1, name: 'Matrícula', amount: 150.00, dueDate: '15/01/2024', type: 'matricula' },
-      { id: 2, name: 'Mensualidad Enero', amount: 125.00, dueDate: '15/01/2024', type: 'mensualidad' },
-      { id: 3, name: 'Uso Sala de Cómputo', amount: 25.00, dueDate: '15/01/2024', type: 'otros' },
+      { id: 1, name: 'Matrícula', amount: 35.00, dueDate: '15/01/2024', type: 'matricula' },
+      { id: 2, name: 'Mensualidad Enero', amount: 45.00, dueDate: '15/01/2024', type: 'mensualidad' },
+      { id: 3, name: 'Uso Sala de Cómputo', amount: 16.00, dueDate: '15/01/2024', type: 'otros' },
       { id: 4, name: 'Papelería', amount: 15.00, dueDate: '15/01/2024', type: 'otros' },
-      { id: 5, name: 'Mensualidad Febrero', amount: 125.00, dueDate: '15/02/2024', type: 'mensualidad' },
-      { id: 6, name: 'Mensualidad Marzo', amount: 125.00, dueDate: '15/03/2024', type: 'mensualidad' },
-      { id: 7, name: 'Mensualidad Abril', amount: 125.00, dueDate: '15/04/2024', type: 'mensualidad' },
-      { id: 8, name: 'Mensualidad Mayo', amount: 125.00, dueDate: '15/05/2024', type: 'mensualidad' },
-      { id: 9, name: 'Mensualidad Junio', amount: 125.00, dueDate: '15/06/2024', type: 'mensualidad' }
+      { id: 5, name: 'Mensualidad Febrero', amount: 45.00, dueDate: '15/02/2024', type: 'mensualidad' },
+      { id: 6, name: 'Mensualidad Marzo', amount: 45.00, dueDate: '15/03/2024', type: 'mensualidad' },
+      { id: 7, name: 'Mensualidad Abril', amount: 45.00, dueDate: '15/04/2024', type: 'mensualidad' },
+      { id: 8, name: 'Mensualidad Mayo', amount: 45.00, dueDate: '15/05/2024', type: 'mensualidad' },
+      { id: 9, name: 'Mensualidad Junio', amount: 45.00, dueDate: '15/06/2024', type: 'mensualidad' }
     ],
     "II-2024": [
-      { id: 10, name: 'Matrícula', amount: 150.00, dueDate: '15/07/2024', type: 'matricula' },
-      { id: 11, name: 'Mensualidad Julio', amount: 125.00, dueDate: '15/01/2024', type: 'mensualidad' },
-      { id: 12, name: 'Uso Sala de Cómputo', amount: 25.00, dueDate: '15/01/2024', type: 'otros' },
+      { id: 10, name: 'Matrícula', amount: 35.00, dueDate: '15/07/2024', type: 'matricula' },
+      { id: 11, name: 'Mensualidad Julio', amount: 45.00, dueDate: '15/01/2024', type: 'mensualidad' },
+      { id: 12, name: 'Uso Sala de Cómputo', amount: 16.00, dueDate: '15/01/2024', type: 'otros' },
       { id: 13, name: 'Papelería', amount: 15.00, dueDate: '15/01/2024', type: 'otros' },
-      { id: 14, name: 'Mensualidad Agosto', amount: 130.00, dueDate: '15/08/2024', type: 'mensualidad' },
-      { id: 15, name: 'Mensualidad Septiembre', amount: 130.00, dueDate: '15/09/2024', type: 'mensualidad' },
-      { id: 16, name: 'Mensualidad Octubre', amount: 130.00, dueDate: '15/10/2024', type: 'mensualidad' },
-      { id: 17, name: 'Mensualidad Noviembre', amount: 130.00, dueDate: '15/11/2024', type: 'mensualidad' },
-      { id: 18, name: 'Mensualidad Diciembre', amount: 130.00, dueDate: '15/12/2024', type: 'mensualidad' }
+      { id: 14, name: 'Mensualidad Agosto', amount: 45.00, dueDate: '15/08/2024', type: 'mensualidad' },
+      { id: 15, name: 'Mensualidad Septiembre', amount: 45.00, dueDate: '15/09/2024', type: 'mensualidad' },
+      { id: 16, name: 'Mensualidad Octubre', amount: 45.00, dueDate: '15/10/2024', type: 'mensualidad' },
+      { id: 17, name: 'Mensualidad Noviembre', amount: 45.00, dueDate: '15/11/2024', type: 'mensualidad' },
+      { id: 18, name: 'Mensualidad Diciembre', amount: 45.00, dueDate: '15/12/2024', type: 'mensualidad' }
     ],
     // ... otros ciclos
   };

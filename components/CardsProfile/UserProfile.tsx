@@ -23,7 +23,7 @@ const UserProfile = () => {
 
   return (
     <View style={tw`flex-1 bg-gray-50`}>
-      {/* Tarjeta de perfil compacta */}
+      {/* Tarjeta de perfil */}
       <View style={tw`bg-white rounded-lg shadow-sm mx-3 overflow-hidden`}>
         {/* Encabezado */}
         <View style={tw`flex-row justify-between items-center bg-[#003366] px-3`}>
@@ -55,7 +55,6 @@ const UserProfile = () => {
             </View>
           </View>
           
-          {/* Información en lista compacta */}
           <View style={tw`border-t border-gray-100 pt-2`}>
             {/* Carnet */}
             <View style={tw`flex-row items-center py-2`}>
@@ -91,7 +90,7 @@ const UserProfile = () => {
         </View>
       </View>
 
-      {/* Modal de Edición Compacto */}
+      {/* Modal de Edición */}
       <Modal
         visible={isEditing}
         transparent={true}
@@ -107,7 +106,7 @@ const UserProfile = () => {
             </View>
             
             <ScrollView>
-              {/* Campos editables compactos */}
+              {/* Campos editables */}
               <View style={tw`mb-2`}>
                 <Text style={tw`text-gray-600 text-sm mb-1`}>Nombre</Text>
                 <TextInput
@@ -155,7 +154,7 @@ const UserProfile = () => {
 
             </ScrollView>
             
-            {/* Botones de acción compactos */}
+            {/* Botones de acción */}
             <View style={tw`flex-row justify-between mt-3`}>
               <TouchableOpacity 
                 style={tw`bg-gray-200 px-4 py-1.5 rounded`}

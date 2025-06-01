@@ -42,7 +42,7 @@ const StudentInfo = () => {
             </Text>
           </View>
           <Text style={tw`text-gray-800 ${isMobile ? "text-sm" : "text-base"}`}>
-            ST20230001
+            RA01137239
           </Text>
         </View>
 
@@ -63,7 +63,7 @@ const StudentInfo = () => {
             </Text>
           </View>
           <Text style={tw`text-gray-800 ${isMobile ? "text-sm" : "text-base"}`}>
-            Computer Science
+            Lic. en Ciencias de la Computación
           </Text>
         </View>
 

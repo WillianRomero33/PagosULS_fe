@@ -50,7 +50,7 @@ const PaymentHistory = () => {
       {
         date: "15/03/2024",
         concept: "Mensualidad Marzo",
-        amount: 125.0,
+        amount: 45.0,
         status: "Pagado",
       },
       // ... (resto de los datos se mantienen igual)

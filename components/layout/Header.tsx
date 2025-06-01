@@ -13,7 +13,7 @@ const Header = ({ userName = "Willian Romero", isLoggedIn = false }: HeaderProps
       <View style={tw`flex-row justify-between items-center mb-2`}>
         <Image
           source={require("../../assets/images/ULS.png")}
-          style={tw`w-40 h-12`}
+          style={tw`w-40 h-12 bg-white rounded-lg`}
           resizeMode="contain"
         />
 
