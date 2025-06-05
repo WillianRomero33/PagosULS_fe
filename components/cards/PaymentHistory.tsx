@@ -1,5 +1,6 @@
+import { GetSemesters } from "@/Utils/api_db";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Modal,
   Pressable,
@@ -37,7 +38,15 @@ const PaymentHistory = () => {
   const diffTime = testDueDate.getTime() - today.getTime();
   const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  const availableCycles = ["I - 2024", "II - 2024", "I - 2023", "II - 2023"];
+  const [ availableCycles, setAvailableCycles ] = useState<string[]>([])
+
+  useEffect(() => {
+    GetSemesters().then(res =>{
+      console.log(res);
+      
+      setAvailableCycles(res)
+    })
+  },[])
 
   const paymentData = {
     amount: 125.0,
@@ -46,7 +55,7 @@ const PaymentHistory = () => {
   };
 
   const cycleHistoryData: CycleHistory = {
-    "I - 2024": [
+    "1 - 2025": [
       {
         date: "15/03/2024",
         concept: "Mensualidad Marzo",
@@ -143,10 +152,10 @@ const PaymentHistory = () => {
               <ScrollView style={tw`max-h-60`}>
                 {availableCycles.map((cycle) => (
                   <Pressable
-                    key={cycle}
+                    key={cycle.id_semester}
                     style={tw`py-3 px-4 border-b border-gray-100`}
                     onPress={() => {
-                      setSelectedCycle(cycle);
+                      setSelectedCycle(cycle.semester_number + " - " + cycle.year);
                       setShowCyclePicker(false);
                     }}
                   >
@@ -157,7 +166,7 @@ const PaymentHistory = () => {
                           : "text-gray-700"
                       }`}
                     >
-                      {cycle}
+                      {cycle.semester_number} - {cycle.year}
                     </Text>
                   </Pressable>
                 ))}
