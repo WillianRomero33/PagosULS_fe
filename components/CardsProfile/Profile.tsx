@@ -2,6 +2,7 @@ import { Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { Text, View, ScrollView, useWindowDimensions } from "react-native";
 import tw from "twrnc";
 import { useUser } from "../../Utils/UserContext";
+//import { Api } from "../../Utils/Api";
 
 const Profile = () => {
   const { width } = useWindowDimensions();

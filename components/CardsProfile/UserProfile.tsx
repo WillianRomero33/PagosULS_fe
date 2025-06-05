@@ -1,19 +1,28 @@
 import { useState } from 'react';
-import { View, Text, TouchableOpacity, Modal, TextInput, ScrollView, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, TextInput, ScrollView, Dimensions, ActivityIndicator, Alert } from 'react-native';
 import { MaterialCommunityIcons, FontAwesome5, MaterialIcons, Fontisto } from '@expo/vector-icons';
 import tw from 'twrnc';
 import { useUser } from '../../Utils/UserContext';
+  
 
 const UserProfile = () => {
   const { width } = Dimensions.get('window');
   const isSmallScreen = width < 375;
-  const { userData, setUserData } = useUser();
+  const { userData, updateProfile } = useUser();
   const [isEditing, setIsEditing] = useState(false);
   const [tempData, setTempData] = useState({...userData});
+  const [isUpdating, setIsUpdating] = useState(false);
 
-  const handleSave = () => {
-    setUserData(tempData);
-    setIsEditing(false);
+  const handleSave = async () => {
+    setIsUpdating(true);
+    const success = await updateProfile(tempData);
+    setIsUpdating(false);
+    
+    if (success) {
+      setIsEditing(false);
+    } else {
+      Alert.alert('Error', 'No se pudo actualizar el perfil');
+    }
   };
 
   const handleCancel = () => {
@@ -163,12 +172,18 @@ const UserProfile = () => {
                 <Text style={tw`text-gray-800 text-sm`}>Cancelar</Text>
               </TouchableOpacity>
               
-              <TouchableOpacity 
-                style={tw`bg-[#003366] px-4 py-1.5 rounded`}
-                onPress={handleSave}
-              >
-                <Text style={tw`text-white text-sm`}>Guardar</Text>
-              </TouchableOpacity>
+             <TouchableOpacity 
+    style={tw`bg-[#003366] px-4 py-1.5 rounded`}
+    onPress={handleSave}
+    disabled={isUpdating}
+  >
+    {isUpdating ? (
+      <ActivityIndicator color="white" size="small" />
+    ) : (
+      <Text style={tw`text-white text-sm`}>Guardar</Text>
+    )}
+  </TouchableOpacity>
+
             </View>
           </View>
         </View>
